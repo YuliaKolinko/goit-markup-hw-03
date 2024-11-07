@@ -1,3 +1,4 @@
+/* Base style */
 body {
   font-family: "Roboto", sans-serif;
   background-color: #ffffff;
@@ -6,13 +7,45 @@ body {
 ul,
 ol {
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0 auto;
 }
 a {
   text-decoration: none;
+  color: currentColor;
 }
+.container {
+  max-width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.section {
+  padding: 120px 0;
+}
+/* Header styles */
 .header {
+  border-bottom: 1px solid #e7e9fc;
+}
+.header-container {
+  display: flex;
+  align-items: center;
 }
 .header-nav {
+  display: flex;
+  align-items: center;
+}
+.header-logo {
+  padding: 24px 0;
+  margin-right: 76px;
 }
 .logo {
   font-family: "Raleway", sans-serif;
@@ -27,6 +60,9 @@ a {
   color: #2e2f42;
 }
 .hav-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 .nav-iten {
 }
@@ -36,12 +72,20 @@ a {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  padding: 40px 0;
+  display: block;
 }
 
 .contacts {
   font-style: normal;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
 }
 .contacts-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 .contacts-item {
 }
@@ -50,6 +94,8 @@ a {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+  display: block;
+  padding: 24px 0;
 }
 .nav-link:hover,
 .nav-link:focus,
@@ -57,6 +103,7 @@ a {
 .contacts-link:focus {
   color: #404bbf;
 }
+/* Hero section styles */
 .hero-section {
   background: #2e2f42;
 }
@@ -67,8 +114,12 @@ a {
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
+  width: 496px;
+  margin: auto;
+  margin-bottom: 48px;
 }
 .hero-section-button {
+  display: block;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -77,6 +128,11 @@ a {
   background: #4d5ae5;
   color: #fff;
   cursor: pointer;
+  align-items: center;
+  padding: 16px 32px;
+  border-radius: 4px;
+  margin: auto;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
 .hero-section-button:hover,
 .hero-section-button:focus {
@@ -84,12 +140,32 @@ a {
 }
 .hero-section-button-text {
 }
+/* Section about styles */
+.about-us-container {
+}
 .section-about {
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 .section-about-title {
 }
 
 .section-about-list {
+  display: flex;
+
+  justify-content: center;
+  margin: 0 auto;
+  gap: 24px;
 }
 .section-about-item {
 }
@@ -101,8 +177,11 @@ a {
   letter-spacing: 0.02em;
   color: #434455;
 }
+/* Section our team styles  */
 .section-our-team {
   background: #f4f4fd;
+}
+.conteiner-our-team {
 }
 .section-our-team-title,
 .section-our-portfolio-title,
@@ -115,10 +194,28 @@ a {
   text-align: center;
   color: #2e2f42;
 }
+.section-our-team-title {
+  margin-bottom: 72px;
+}
 .section-our-team-list {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: center;
+}
+.section-our-team-subtitle {
+  margin-bottom: 8px;
 }
 .section-our-team-item {
-  background-color: #ffffff;
+  text-align: center;
+  background: #f4f4fd;
+  border-radius: 0 0 4px 4px;
+  padding: 0px 0px 32px 0px;
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+.card-text {
+  padding: 32px 16px;
 }
 .section-our-team-subtitle,
 .section-our-portfolio-subtitle,
@@ -127,7 +224,7 @@ a {
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  text-align: center;
+
   color: #2e2f42;
 }
 .section-our-team-paragraf,
@@ -139,15 +236,36 @@ a {
 
   color: #434455;
 }
+/* Section our portfolio styles */
 .section-our-portfolio {
 }
+.conteiner-our-team {
+}
 .section-our-portfolio-title {
+  margin-bottom: 72px;
 }
 .section-our-portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.portfolio-row-first {
+  margin-bottom: 48px;
+  display: flex;
+  gap: 24px;
+}
+.portfolio-row-second {
+  display: flex;
+  gap: 24px;
+}
+.item-text {
+  margin: 32px 0;
 }
 .section-our-portfolio-item {
+  border: 1px solid #e7e9fc;
+  border-top: none;
 }
-.section-our-portfolio-h3-title {
+.section-our-portfolio-subtitle {
+  margin-bottom: 8px;
 }
 .section-our-portfolio-paragraf {
 }
